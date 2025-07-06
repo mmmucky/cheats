@@ -1,6 +1,5 @@
-# aws, iam
+% aws, iam
 
 ### SSO
-# Sing in with SSO
+# Sign in with SSO
 aws sso login
-
