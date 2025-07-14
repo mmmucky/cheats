@@ -1,0 +1,5 @@
+% aws, elb, elbv2
+
+### Viewing
+# List v2 LBs by name
+aws elbv2 describe-load-balancers --query "LoadBalancers[0].LoadBalancerName" --output text

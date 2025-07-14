@@ -1,0 +1,14 @@
+% aws, rds
+
+### Viewing
+# Describe Global Clusters
+aws rds describe-global-clusters
+
+
+### Updating
+# Remove deletion protection from RDS GlobalCluster database
+aws rds modify-global-cluster --global-cluster-identifier CLUSTER_IDENTIFIER --no-deletion-protection
+
+
+# Remove from global cluster
+aws rds remove-from-global-cluster --global-cluster-identifier CLUSTER_IDENTIFIER --db-cluster-identifier DB_CLUSTER_ID

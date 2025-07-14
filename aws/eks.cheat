@@ -1,0 +1,7 @@
+% aws, eks
+
+### Viewing
+# List Cluster
+aws eks list-clusters
+# Describe Cluster
+aws eks describe-cluster --name CLUSTER_NAME
