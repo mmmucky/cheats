@@ -1,0 +1,9 @@
+% k8s, helm
+
+### Deployments
+# List failed deployments
+helm list --failed
+
+### Resources
+# Helm Cheat Sheet
+open https://helm.sh/docs/intro/cheatsheet/
