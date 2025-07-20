@@ -14,3 +14,9 @@ for dir in "$(navi info cheats-path)"/*__*; do
   cd "$dir" && git pull
 done
 ```
+
+## Alias so navi doesn't run commands by default
+
+```
+alias navi='navi --print'
+```
