@@ -1,5 +1,8 @@
 % aws, ssm
 
 ### Viewing
-# Get SSM Parameter names
+# List SSM Parameter names
 aws ssm describe-parameters --query 'Parameters[*].Name'
+
+# Get SSM Parameter
+aws ssm get-parameters --name <NAME>
