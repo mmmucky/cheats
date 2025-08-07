@@ -4,8 +4,11 @@
 # Search for commits by regex in all branches(--all) and show diffs(-p)
 git log -G"search_regex" --source --all -p
 
-# Show commits in time range
+# List commits in time range
 git log --since "2000-01-01" --until "2026-01-01"
 
-# Show changed files
+# list commits and changed files.  (alternative to --name-only)
 git log --stat
+
+# list commits. One line, with dates.
+git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=short

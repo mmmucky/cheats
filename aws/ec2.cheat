@@ -1,0 +1,5 @@
+% aws, ec2
+
+### Viewing
+# List spot price requests
+aws ec2 describe-spot-instance-requests --query 'SpotInstanceRequests[].[InstanceId,SpotInstanceRequestId,SpotPrice,Type,State]'

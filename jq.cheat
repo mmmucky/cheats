@@ -1,0 +1,5 @@
+% jq, json
+
+### Filter
+# Filter list by list element attribute.  map(f) applies f to each element of .[]
+echo '[{"name": "James"}, {"name": "Bob"}]' | jq 'map(select(.name=="James"))'

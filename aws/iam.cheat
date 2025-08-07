@@ -3,3 +3,7 @@
 ### SSO
 # Sign in with SSO
 aws sso login
+
+### ARNs
+# ARN Structure
+arn:partition:service:region:account-id:resource
