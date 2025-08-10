@@ -1,5 +1,8 @@
-% aws, ec2
+% aws, ec2, vpc
 
 ### Viewing
 # List spot price requests
 aws ec2 describe-spot-instance-requests --query 'SpotInstanceRequests[].[InstanceId,SpotInstanceRequestId,SpotPrice,Type,State]'
+
+# List subnets
+nu -c 'aws ec2 describe-subnets | from json | get Subnets | select VpcId SubnetId CidrBlock AvailabilityZone AvailabilityZoneId DefaultForAz MapPublicIpOnLaunch | sort-by VpcId AvailabilityZone CidrBlock'
