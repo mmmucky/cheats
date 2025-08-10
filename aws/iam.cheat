@@ -1,5 +1,9 @@
 % aws, iam
 
+### Authentication
+# Print long-lived access key in aws-vault
+aws-vault exec PROFILE --no-session -- env | grep -E 'AWS_(ACCESS|SECRET|SESSION)_'
+
 ### SSO
 # Sign in with SSO
 aws sso login
