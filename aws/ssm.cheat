@@ -6,3 +6,6 @@ aws ssm describe-parameters --query 'Parameters[*].Name'
 
 # Get SSM Parameter
 aws ssm get-parameters --name <NAME>
+
+# List SSM nodes that are part of a Kubernetes Cluster(have eks:cluster-name tag)
+aws ssm describe-instance-information --filters Key=tag-key,Values=eks:cluster-name --query 'InstanceInformationList[].{InstanceId:InstanceId,ComputerName:ComputerName}'   --output table

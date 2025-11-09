@@ -1,0 +1,5 @@
+% Terminal, Ghostty
+
+### Fix 00~
+# Tell shell to cool it with the bracketed sequences.
+printf '\e[?2004l'

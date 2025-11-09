@@ -1,0 +1,17 @@
+% k8s, kubectl
+
+### CLI Config
+# Load kubectl Bash completions into current shell
+source <(kubectl completion bash)
+
+### Jobs
+# List Jobs
+kubectl get jobs.batch -A
+
+### CronJobs
+# List CronJobs
+kubectl get cronjobs.batch -A
+
+### Pods
+# List Pods by start time
+kubectl get pods -A --sort-by=.status.startTime -o custom-columns=NAME:.metadata.name,PHASE:.status.phase,START:.status.startTime
