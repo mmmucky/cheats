@@ -10,4 +10,4 @@ aws sso login
 
 ### ARNs
 # ARN Structure
-arn:partition:service:region:account-id:resource
+echo arn:partition:service:region:account-id:resource

@@ -1,0 +1,5 @@
+% Bash
+
+### Associative Arrays
+# Create and print Bash Associative Array
+declare -A assoc_array; assoc_array["key"]="value" ; for v in "${assoc_array[@]}"; do echo "$v" ; done

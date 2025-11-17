@@ -3,3 +3,7 @@
 ### Fix 00~
 # Tell shell to cool it with the bracketed sequences.
 printf '\e[?2004l'
+
+### Hex dump
+# Hex dump using od -Ax (hex) -tx1z (hex, one byte per integer with printable characters at end of line).
+od -Ax -tx1z /dev/sdX

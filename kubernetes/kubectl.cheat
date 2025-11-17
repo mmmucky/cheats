@@ -16,5 +16,8 @@ kubectl get cronjobs.batch -A
 # List Pods by start time
 kubectl get pods -A --sort-by=.status.startTime -o custom-columns=NAME:.metadata.name,PHASE:.status.phase,START:.status.startTime
 
+# List pods on specific node
+kubectl get pods -A -o wide --field-selector spec.nodeName=<NODE_NAME>
+
 # List Pods by restart count
 kubectl get pods -A --no-headers | sort -nk5

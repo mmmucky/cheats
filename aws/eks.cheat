@@ -3,5 +3,9 @@
 ### Viewing
 # List Cluster
 aws eks list-clusters
+
 # Describe Cluster
 aws eks describe-cluster --name CLUSTER_NAME
+
+# Reboot EKS Node 
+kubectl drain <NODE_NAME> --ignore-daemonsets --delete-emptydir-data
