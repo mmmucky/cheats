@@ -1,0 +1,5 @@
+% jq, json
+
+### String Interpolation
+# Extract two values from an object and print them in a single string.
+echo '{"k1": "v1", "k2": "v2"}' | jq '. | "\(.k1) \(.k2)"'
