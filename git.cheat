@@ -12,3 +12,7 @@ git log --stat
 
 # list commits. One line, with dates.
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=short
+
+### Stash
+# Show stash diff
+git stash show stash@{1} -p
