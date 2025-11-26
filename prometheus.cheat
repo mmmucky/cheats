@@ -1,0 +1,5 @@
+% Prometheus
+
+### Metrics 
+# Enumerate metric names from labels
+echo 'count by (__name__) ({key="value"})'
