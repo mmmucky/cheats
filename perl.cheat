@@ -1,0 +1,5 @@
+% Perl
+
+### Timestamps
+# Translate firt epoch in each line of stdin to a date.
+echo "perl -pe 's/(\\d+)/localtime(\$1)/e'"
