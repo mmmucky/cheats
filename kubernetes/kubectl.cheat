@@ -5,8 +5,8 @@
 source <(kubectl completion bash)
 
 ### Jobs
-# List Jobs
-kubectl get jobs.batch -A
+# List Jobs with start and end times.
+kubectl get job -A -o json | jq -r '.items[] | "\(.metadata.name)  \(.status.startTime)  \(.status.completionTime)"'
 
 ### CronJobs
 # List CronJobs
