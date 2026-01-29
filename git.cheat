@@ -19,3 +19,7 @@ git log --all --decorate --oneline --graph
 ### Stash
 # Show stash diff
 git stash show stash@{1} -p
+
+### Branching
+# Show Commits reachable from branch B but not A (preview content added by merging B into A)
+git log --oneline --decorate --graph A..B
