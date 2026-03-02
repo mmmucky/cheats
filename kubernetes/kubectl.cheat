@@ -24,3 +24,7 @@ kubectl get pods -A -o wide --field-selector spec.nodeName=<NODE_NAME>
 
 # List Pods by restart count
 kubectl get pods -A --no-headers | sort -nk5
+
+### Debug
+# Attach debug container to pod with access to container's file system via /proc/1/root
+kubectl debug -it <POD>  --image=debian:bookworm-slim --target=<CONTAINER> -- bash -c "ls /proc/1/root"
