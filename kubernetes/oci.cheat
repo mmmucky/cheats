@@ -1,0 +1,5 @@
+% k8s, docker
+
+### OCI Registry
+# List versions available in OCI registry
+oras repo tags ghcr.io/traefik/helm/traefik
