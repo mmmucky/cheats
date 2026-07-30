@@ -1,0 +1,5 @@
+% Docker
+
+### Inspect
+# Get info about what created a container
+docker inspect <container> --format '{{json .Config.Labels}}' | jq '.'
