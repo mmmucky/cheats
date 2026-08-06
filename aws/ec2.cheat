@@ -6,3 +6,6 @@ aws ec2 describe-spot-instance-requests --query 'SpotInstanceRequests[].[Instanc
 
 # List subnets
 nu -c 'aws ec2 describe-subnets | from json | get Subnets | select VpcId SubnetId CidrBlock AvailabilityZone AvailabilityZoneId DefaultForAz MapPublicIpOnLaunch | sort-by VpcId AvailabilityZone CidrBlock'
+
+# List instances by tag
+aws ec2 describe-instances --filters "Name=tag:<Name>,Values=<Value>" --query "Reservations[].Instances[].[InstanceId,State.Name]"   --output table
