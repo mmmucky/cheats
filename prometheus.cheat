@@ -1,5 +1,5 @@
 % Prometheus
 
 ### Metrics 
-# Enumerate metric names from labels
-echo 'count by (__name__) ({key="value"})'
+# Enumerate metric names from labels, filtering by metric name
+echo 'count by (__name__) ({namespace="namespace", __name__=~"container_.*"})'
